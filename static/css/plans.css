@@ -1,0 +1,114 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #b3d9ff, #f0f8ff);
+    height: 100vh;
+    overflow: hidden; /* Prevents the entire page from scrolling */
+}
+
+.plans-section {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    height: 80vh; /* Adjust this as needed */
+    overflow-y: auto; /* Makes the timeline scrollable */
+}
+
+.plans-section h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #4a90e2; /* Blue color */
+    margin-bottom: 20px;
+    animation: glowing 3.2s infinite alternate;
+}
+
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+.timeline li {
+    margin: 20px 0;
+    position: relative;
+    padding-left: 40px;
+}
+
+.timeline li::before {
+    content: '';
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: #0056b3;
+    border-radius: 50%;
+}
+
+.timeline li::after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 10px;
+    width: 2px;
+    height: 100%;
+    background: #0056b3;
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+.timeline-content p {
+    margin: 5px 0 0;
+}
+
+.timeline-content:hover {
+    background: rgba(255, 255, 255, 0.8);
+    transform: scale(1.05);
+}
+
+.timeline li:last-child::after {
+    display: none;
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('/static/img/blueheart.png');
+    background-size: cover;
+    animation: fall linear infinite;
+    z-index: 0;
+    top: 550000px;
+    left: calc(10% * var(--i));
+    z-index: 1;
+}
+
+@keyframes fall {
+    0% {
+        top: -80px;
+        opacity: 1;
+        transform: translateY(-10vh) rotate(0deg) scale(0.7);
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+        transform: translateY(calc(100vh + 10vh)) rotate(720deg) scale(0.3);
+    }
+}
+
+

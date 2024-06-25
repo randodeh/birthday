@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/letters.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="letters">
+    <h1 class="title">Letters for You</h1>
+    <div class="letter-list">
+        <div class="letter" onclick="openLetter('letter1')">
+            <h2>For my sleepyhead</h2>
+        </div>
+        <div class="letter" onclick="openLetter('letter2')">
+            <h2>To my pubg addict</h2>
+        </div>
+        <!-- Add more letters as needed -->
+    </div>
+    <div id="overlay" onclick="closeLetter()">
+        <div id="letter1" class="letter-content">
+            <h2>For my sleepyhead</h2>
+            <p>Dear bubu, i hope you understand how much i love you. You're so perfect and i know i always say this but i love everything about you, just the thought of you makes me smile and realise how in love i am by you. I smile because i realise that ur the most good looking person to exist and the way you treat me(most of the time hehe) for example you being nice and gentle with me really touches my heart. Plus i didn't think love existed before i met you, i wasnt really sure who i was but when you came into my life, you gave it a definition. You're honestly so amazing and i wish the best for you and our future.  </p>
+        </div>
+        <div id="letter2" class="letter-content">
+            <h2>To my pubg addict</h2>
+            <p>I can't believe we've been together 9 months, honestly its such an achievment and its only the start. I wanted to apologise for all the hard times i gave you and i mean it, for everytime i made you stress or paranoid. I think i wasnt too understanding sometimes perhaps because of our age and i understand sometimes it could be hard to communicate and that i should be more patient. Even for pubg i used to think why would you play instead of speaking to me, without me realising maybe you could have had a tough day too or maybe its to help with your adhd especially when we dont have much to speak about. I love you josh and i plan to be more easy on you for the furture. </p>
+        </div>
+        <!-- Add more letter contents as needed -->
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<body>
+    <div class="content">
+        <div id="heart-container"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+{% endblock %}

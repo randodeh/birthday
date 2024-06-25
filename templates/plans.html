@@ -1,0 +1,61 @@
+{% extends 'index.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/plans.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="content">
+    <div class="plans-section">
+        <h1 class="special-title">Future Plans</h1>
+        <p>Here are some dreams and plans I look forward to sharing with you:</p>
+        <ul class="timeline">
+            <li>
+                <div class="timeline-content">
+                    <h3>2024 - 22/09/2024</h3>
+                    <p>Celebrate our 1 year Anniversary</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2025</h3>
+                    <p>Rand finishes all her exams and school</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2026</h3>
+                    <p>We will meet hopefully yay</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>life goes on and we get closer...</h3>
+                    <p></p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2032</h3>
+                    <p>We move in together (maybe sooner who knows)</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2032</h3>
+                    <p>First thing we're doing when we move in together is get a kitty hehe :)</p>
+                </div>
+            </li>
+            <li>
+                <div class="timeline-content">
+                    <h3>2032 - until we die</h3>
+                    <p>I will love you forever and ever and we will spend our lives together. We will try everything together and go to new places and have the best time ever.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div id="heart-container"></div>
+</div>
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}

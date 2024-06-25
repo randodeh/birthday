@@ -1,0 +1,66 @@
+.memories h1 {
+    font-family: 'Pacifico', cursive; 
+    font-size: 3em; 
+    color: #4a90e2; 
+    margin-bottom: 20px;
+    animation: glowing 3.2s infinite alternate; 
+    position: relative; 
+    z-index: 2; 
+}
+
+.memory {
+    margin-bottom: 30px;
+}
+
+.memory h2 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.memory p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.memory img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.heart {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('/static/img/blueheart.png');
+    background-size: cover;
+    animation: fall linear infinite;
+    top: -100000px; 
+    left: calc(10% * var(--i)); 
+    z-index: 1; 
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+        opacity: 1;
+        transform: translateY(-10vh) rotate(0deg) scale(0.7);
+    }
+    100% {
+        top: 100%;
+        opacity: 0;
+        transform: translateY(calc(100vh + 10vh)) rotate(720deg) scale(0.3);
+    }
+}
+
+@keyframes glowing {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.1), 0 0 20px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.3), 0 0 40px rgba(255, 255, 255, 0.4), 0 0 50px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 1), 0 0 20px rgba(255, 255, 255, 1), 0 0 30px rgba(255, 255, 255, 1), 0 0 40px rgba(255, 255, 255, 1), 0 0 50px rgba(255, 255, 255, 1);
+    }
+}
+

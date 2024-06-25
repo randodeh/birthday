@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/memories.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="memories">
+    <h1>Our Memories</h1>
+    <div class="content">
+        <div id="heart-container"></div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/oEqV9q_rC1A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</div>
+{% endblock %}

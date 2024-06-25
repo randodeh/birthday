@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+
+{% block extra_styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap">
+{% endblock %}
+
+{% block content %}
+<div class="home">
+    <h1 class="special-title">Happy 25th birthday to my everything <3</h1>
+    <p>Hiii, happy birthday my love!!!! I hope being 25 brings so much more happiness and light to your life, you deserve to be happy and i'm sure as you're getting older you'll acheive more in life. I'll make sure this year for you will be the best and i'll support you with everything. Perhaps its your special year because ur turning 25 on the 25th, you only get to experience this once in a lifetime so make sure you try new things and live life the way the younger you would have wanted to live it. I'm certain life will start to get better for you (it's already better with me in it ofcourse) but i'm going to make sure you're happy because you mean everything to me. Happy birthday once again and i love you so much <3 </p>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='img/a.jpg') }}" alt="Image A">
+        <img src="{{ url_for('static', filename='img/b.jpg') }}" alt="Image B">
+        <img src="{{ url_for('static', filename='img/c.jpg') }}" alt="Image C">
+        <img src="{{ url_for('static', filename='img/d.jpg') }}" alt="Image D">
+        <img src="{{ url_for('static', filename='img/e.jpg') }}" alt="Image E">
+        <img src="{{ url_for('static', filename='img/f.jpg') }}" alt="Image F">
+        <img src="{{ url_for('static', filename='img/g.jpg') }}" alt="Image G">
+        <img src="{{ url_for('static', filename='img/h.jpg') }}" alt="Image H">
+    </div>
+</div>
+<body>
+    <div class="content">
+        <div id="heart-container"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+{% endblock %} 
+
